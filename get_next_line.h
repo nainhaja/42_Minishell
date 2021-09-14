@@ -73,6 +73,7 @@ char *ft_checkCases(char *s,char **env);
 char    *ft_remove_n(char *str);
 void copy(char **t,int n);
 int get_listcount();
+void exec_echo(int *stdio, int split_cpt, int start, char **env, int i);
 void printlist(int x);
 void DeleteNode( char *t);
 int     search_lastRed(char *str);
@@ -82,5 +83,15 @@ char * SearchNode(char *t);
 int ft_strrlen(char **v);
 void ft_putstr(char *str);
 void ft_check_split(char *str);
+void exec_export(int split_cpt);
+void exec_unset(int split_cpt);
+void exec_cmds(int *stdio, int split_cpt, char **env);
+void check_conditions(int split_cpt, int *stdio, int start, char **env, int i, char *buff);
+void    ft_divide(char *buff, int *stdio, char **env);
+char *ft_check_redr(char *str,int cpt);
+void ft_free(int split_cpt);
+void    ft_init(int *split_cpt, int *i, int *awdi);
+void ft_stock_split(char *str, int *i,int cpt);
+void ft_remove_quotes_file(char *str,int *i);
 
 #endif

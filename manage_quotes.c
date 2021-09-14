@@ -35,10 +35,8 @@ char *ft_remove_spacess(char *haha, int start, int i)
             if(haha[i - 1]  == '\\')
             {
                 ptr = ft_strjoin(ptr,"' ");
-                // 
                 start = i;
                 i++;
-                //
             }  
             else 
                 ft_get_string_quotes(haha,&i,&start,&ptr);
@@ -66,7 +64,6 @@ char *ft_remove_spacess(char *haha, int start, int i)
     }
     if(haha[start] != '\0')
         ptr = ft_strjoin(ptr, ft_substr(haha,start,end - start));
-    printf("ptr |%s|\n",ptr);
     return ptr;
 }
 
